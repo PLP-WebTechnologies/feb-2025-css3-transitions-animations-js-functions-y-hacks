@@ -1,0 +1,84 @@
+:root {
+  --bg-color: #f0f8ff;
+  --text-color: hsl(281, 61%, 47%);
+  --accent-color: #10e61b;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  --bg-color: #4f90d1;
+  --text-color: #3ce961;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: var(--accent-color);
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.gallery img {
+  width: 280px;
+  height: auto;
+  margin: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.preferences {
+  margin: 2rem 0;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: rgba(7, 12, 12, 0.527);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5a20b66e;
+  transform: scale(1.05);
+}
+
+.box {
+  margin: 30px auto;
+  width: 100px;
+  height: 100px;
+  background-color: #34db42;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.box.animate {
+  transform: rotate(360deg) scale(1.5);
+}
